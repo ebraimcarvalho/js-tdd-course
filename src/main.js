@@ -1,12 +1,14 @@
-const a = 5;
-const b = 120;
+const city = 'Ireland';
+const something = 'Guinness';
+const otherthing = 'Leprachaums';
 
-const c = 331;
-
-const name = 'ebra';
-
-function sum() {
-  return a + b + c + name;
+function green(template, ...values) {
+  return template.reduce((acc, att, i) => `${acc}
+      <span class="green">${values[i - 1]}</span>
+      ${att}
+    `);
 }
 
-sum();
+const ireland = green`I live in ${city}, the city of ${something} and ${otherthing}`;
+
+document.body.innerHTML = ireland;
