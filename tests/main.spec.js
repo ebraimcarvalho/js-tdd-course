@@ -8,38 +8,30 @@
 /* eslint-disable no-var */
 /* eslint-disable prefer-destructuring */
 var expect = require('chai').expect;
+var calc = require('../src/tests');
 
-describe('Main', function () {
-  var arr;
+describe('Calc', function () {
+  describe('Smoke Tests', () => {
+    it('should exist calc', function() {
+      expect(calc).to.exist;
+    });
 
-  // roda todas as vezes, antes de CADA bloco
-  beforeEach(function () {
-    arr = [1, 2, 3];
-  });
-
-  // testar tipos ou se existe (smoke test)
-  // eslint-disable-next-line space-before-function-paren
-  it('should be an array', function() {
-    expect(arr).to.be.a('array');
-  });
-
-  it('should have a size of 4 when push another value to the array', function() {
-    arr.push(4);
-    expect(arr).to.be.lengthOf(4);
-  });
-
-  it('should remove the value 3 when use pop in the array', function() {
-    arr.pop();
-    expect(arr).to.not.include(3);
-  });
-
-  it('should return true when pop 3 from the array', function() {
-    expect(arr.pop() === 3).to.be.true;
-  });
-
-  it('should have a size of 2 when pop a value from the array', function() {
-    arr.pop();
-    expect(arr).to.have.length(2);
+    it('should exist sum in calc', () => {
+      expect(calc.sum).to.exist;
+      expect(calc.sum).to.be.a('function');
+    });
+    it('should exist sub in calc', () => {
+      expect(calc.sub).to.exist;
+      expect(calc.sub).to.be.a('function');
+    });
+    it('should exist mult in calc', () => {
+      expect(calc.mult).to.exist;
+      expect(calc.mult).to.be.a('function');
+    });
+    it('should exist div in calc', () => {
+      expect(calc.div).to.exist;
+      expect(calc.div).to.be.a('function');
+    });
   });
 
 });
