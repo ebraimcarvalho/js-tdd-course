@@ -34,4 +34,37 @@ describe('Calc', function () {
     });
   });
 
+
+  describe('Sum', () => {
+    it('should return 4 when `sum(2, 2)`', () => {
+      expect(calc.sum(2, 2)).to.be.equal(4);
+    });
+  });
+
+  describe('Sub', () => {
+    it('should return 4 when `sub(6, 2)`', () => {
+      expect(calc.sub(6, 2)).to.be.equal(4);
+    });
+
+    it('should return -4 when `sub(6, 10)`', () => {
+      expect(calc.sub(6, 10)).to.be.equal(-4);
+    });
+  });
+
+  describe('Mult', () => {
+    it('should return 9 when `mult(3, 3)`', () => {
+      expect(calc.mult(3, 3)).to.be.equal(9);
+    });
+  });
+
+  describe('Div', () => {
+    it('should return 5 when `div(25, 5)`', () => {
+      expect(calc.div(25, 5)).to.be.equal(5);
+    });
+
+    it('should return `It is not possible divide with any divisor being 0`', () => {
+      expect(calc.div(0, 1)).to.be.equal('It is not possible divide with any divisor being 0');
+    });
+  });
+
 });
