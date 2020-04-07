@@ -10,7 +10,8 @@
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
-    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch"
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "eslint-plugin-import": "^2.20.2",
     "husky": "^4.2.3",
     "mocha": "^7.1.1",
+    "nyc": "^15.0.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
