@@ -84,6 +84,10 @@ describe('Tests', function () {
     it('should return 7 when `fizzBuzz(7)`', () => {
       expect(tests.fizzBuzz(7)).to.be.equal(7);
     });
+
+    it('should return 0 when `fizzBuzz(0)`', () => {
+      expect(tests.fizzBuzz(0)).to.be.equal(0);
+    });
   });
 
 });
