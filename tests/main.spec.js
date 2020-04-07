@@ -7,12 +7,13 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-var */
 /* eslint-disable prefer-destructuring */
-var expect = require('chai').expect;
-var calc = require('../src/tests');
+
+import { expect } from 'chai';
+import calc from '../src/tests';
 
 describe('Calc', function () {
   describe('Smoke Tests', () => {
-    it('should exist calc', function() {
+    it('should exist calc', () => {
       expect(calc).to.exist;
     });
 
