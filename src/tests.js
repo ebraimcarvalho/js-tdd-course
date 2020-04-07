@@ -10,11 +10,5 @@ const tests = {
     if (num % 5 === 0) return 'Buzz';
     return num;
   },
-  foo: () => {
-    var arr = "hi";
-    var b = 10;
-    var x = 10;
-    return 'bla';
-  },
 };
 export default tests;
