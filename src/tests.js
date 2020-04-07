@@ -11,7 +11,7 @@ const tests = {
     return num;
   },
   foo: () => {
-    var arr;
+    var arr = "hi";
     var b = 10;
     var x = 10;
     return 'bla';
