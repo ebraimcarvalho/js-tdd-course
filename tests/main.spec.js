@@ -9,62 +9,80 @@
 /* eslint-disable prefer-destructuring */
 
 import { expect } from 'chai';
-import calc from '../src/tests';
+import tests from '../src/tests';
 
-describe('Calc', function () {
+describe('Tests', function () {
   describe('Smoke Tests', () => {
     it('should exist calc', () => {
-      expect(calc).to.exist;
+      expect(tests).to.exist;
     });
 
-    it('should exist sum in calc', () => {
-      expect(calc.sum).to.exist;
-      expect(calc.sum).to.be.a('function');
+    it('should exist sum in tests', () => {
+      expect(tests.sum).to.exist;
+      expect(tests.sum).to.be.a('function');
     });
-    it('should exist sub in calc', () => {
-      expect(calc.sub).to.exist;
-      expect(calc.sub).to.be.a('function');
+    it('should exist sub in tests', () => {
+      expect(tests.sub).to.exist;
+      expect(tests.sub).to.be.a('function');
     });
-    it('should exist mult in calc', () => {
-      expect(calc.mult).to.exist;
-      expect(calc.mult).to.be.a('function');
+    it('should exist mult in tests', () => {
+      expect(tests.mult).to.exist;
+      expect(tests.mult).to.be.a('function');
     });
-    it('should exist div in calc', () => {
-      expect(calc.div).to.exist;
-      expect(calc.div).to.be.a('function');
+    it('should exist div in tests', () => {
+      expect(tests.div).to.exist;
+      expect(tests.div).to.be.a('function');
     });
   });
 
 
   describe('Sum', () => {
     it('should return 4 when `sum(2, 2)`', () => {
-      expect(calc.sum(2, 2)).to.be.equal(4);
+      expect(tests.sum(2, 2)).to.be.equal(4);
     });
   });
 
   describe('Sub', () => {
     it('should return 4 when `sub(6, 2)`', () => {
-      expect(calc.sub(6, 2)).to.be.equal(4);
+      expect(tests.sub(6, 2)).to.be.equal(4);
     });
 
     it('should return -4 when `sub(6, 10)`', () => {
-      expect(calc.sub(6, 10)).to.be.equal(-4);
+      expect(tests.sub(6, 10)).to.be.equal(-4);
     });
   });
 
   describe('Mult', () => {
     it('should return 9 when `mult(3, 3)`', () => {
-      expect(calc.mult(3, 3)).to.be.equal(9);
+      expect(tests.mult(3, 3)).to.be.equal(9);
     });
   });
 
   describe('Div', () => {
     it('should return 5 when `div(25, 5)`', () => {
-      expect(calc.div(25, 5)).to.be.equal(5);
+      expect(tests.div(25, 5)).to.be.equal(5);
     });
 
     it('should return `It is not possible divide with any divisor being 0`', () => {
-      expect(calc.div(0, 1)).to.be.equal('It is not possible divide with any divisor being 0');
+      expect(tests.div(0, 1)).to.be.equal('It is not possible divide with any divisor being 0');
+    });
+  });
+
+  describe('FizzBuzz', () => {
+    it('should return `Fizz` when multiple of 3', () => {
+      expect(tests.fizzBuzz(3)).to.be.equal('Fizz');
+    });
+
+    it('should return `Buzz` when multiple of 5', () => {
+      expect(tests.fizzBuzz(10)).to.be.equal('Buzz');
+    });
+
+    it('should return `FizzBuzz` when multiple of 3 and 5', () => {
+      expect(tests.fizzBuzz(15)).to.be.equal('FizzBuzz');
+    });
+
+    it('should return 7 when `fizzBuzz(7)`', () => {
+      expect(tests.fizzBuzz(7)).to.be.equal(7);
     });
   });
 
