@@ -18,5 +18,5 @@ export const searchTracks = (query) => {
 };
 
 export const searchPlaylists = (query) => {
-  search(query, 'playslist');
+  search(query, 'playlist');
 };
